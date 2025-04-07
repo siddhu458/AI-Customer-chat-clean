@@ -21,7 +21,7 @@ const ChatApp = () => {
 
         try {
             const response = await axios.post(
-                "http://localhost:5000/api/chat",
+                "https://ai-customer-chat-clean-2.onrender.com/api/chat",
                 { message },
                 {
                     headers: {

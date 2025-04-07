@@ -16,9 +16,10 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: "https://ai-customer-chat-clean-t9xt.vercel.app",
+  origin: "https://ai-customer-chat-clean-t9xt.vercel.app", // Vercel frontend
   methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
 }));
 app.use(express.json());
 

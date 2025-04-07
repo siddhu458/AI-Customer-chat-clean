@@ -31,7 +31,7 @@ const ManageProducts = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     if (editingId) {
-      await axios.put('https://ai-customer-chat-clean-2.onrender.com/api/products/${editingId}`, form);
+      await axios.put(`https://ai-customer-chat-clean-2.onrender.com/api/products/${editingId}`, form);
     } else {
       await axios.post('https://ai-customer-chat-clean-2.onrender.com/api/products', form);
     }

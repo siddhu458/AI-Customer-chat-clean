@@ -12,7 +12,7 @@ const ChatWindow = () => {
     setMessages([...messages, newMessage]);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/chat', {
+      const response = await axios.post('https://ai-customer-chat-clean-2.onrender.com/api/chat', {
         message: userInput,
       });
 

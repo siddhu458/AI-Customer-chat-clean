@@ -7,7 +7,7 @@ const ManageProducts = () => {
   const [editingId, setEditingId] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/products')
+    axios.get('https://ai-customer-chat-clean-2.onrender.com/api/products')
       .then(res => {
         console.log('Fetched products:', res.data); 
         setProducts(res.data);
@@ -19,7 +19,7 @@ const ManageProducts = () => {
   
 
   const fetchProducts = () => {
-    axios.get('http://localhost:5000/api/products')
+    axios.get('https://ai-customer-chat-clean-2.onrender.com/api/products')
       .then(res => setProducts(res.data))
       .catch(console.error);
   };
@@ -31,9 +31,9 @@ const ManageProducts = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     if (editingId) {
-      await axios.put(`http://localhost:5000/api/products/${editingId}`, form);
+      await axios.put('https://ai-customer-chat-clean-2.onrender.com/api/products/${editingId}`, form);
     } else {
-      await axios.post('http://localhost:5000/api/products', form);
+      await axios.post('https://ai-customer-chat-clean-2.onrender.com/api/products', form);
     }
     setForm({ name: '', price: '', availability: '' });
     setEditingId(null);
@@ -46,7 +46,7 @@ const ManageProducts = () => {
   };
 
   const handleDelete = async id => {
-    await axios.delete(`http://localhost:5000/api/products/${id}`);
+    await axios.delete(`https://ai-customer-chat-clean-2.onrender.com/api/products/${id}`);
     fetchProducts();
   };
 

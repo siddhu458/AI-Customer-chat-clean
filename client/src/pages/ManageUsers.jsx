@@ -7,7 +7,7 @@ const ManageUsers = () => {
   const [editingId, setEditingId] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const API_BASE = 'http://localhost:5000/api/users';
+  const API_BASE = 'https://ai-customer-chat-clean-2.onrender.com/api/users';
 
   const fetchUsers = async () => {
     try {

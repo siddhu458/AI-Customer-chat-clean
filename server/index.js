@@ -5,12 +5,12 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const path = require('path');
 
-const authRoutes = require('../routes/authRoutes');
-const chatRoutes = require('../routes/chatRoutes');
-const userRoutes = require('../routes/userRoutes');
-const productRoutes = require('../routes/productRoutes');
-const utilityRoutes = require('../routes/utilityRoutes');
-const adminRoutes = require('../routes/adminRoutes');
+const authRoutes = require('./routes/authRoutes');
+const chatRoutes = require('./routes/chatRoutes');
+const userRoutes = require('./routes/userRoutes');
+const productRoutes = require('./routes/productRoutes');
+const utilityRoutes = require('./routes/utilityRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 
 dotenv.config();
 connectDB();

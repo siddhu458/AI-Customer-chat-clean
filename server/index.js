@@ -27,17 +27,9 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-  res.send(`
-    <!DOCTYPE html>
-    <html>
-      <head><title>AI Chat Server</title></head>
-      <body>
-        <h1>Welcome to the AI Customer Chat Server 🚀</h1>
-        <p>Try <a href="/api/hello">/api/hello</a> to test the API!</p>
-      </body>
-    </html>
-  `);
+  res.status(200).json({ message: "Welcome to the AI Customer Chat Server!" });
 });
+
 
 
 app.use('/api/auth', authRoutes);

@@ -27,8 +27,18 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.send(`
+    <!DOCTYPE html>
+    <html>
+      <head><title>AI Chat Server</title></head>
+      <body>
+        <h1>Welcome to the AI Customer Chat Server 🚀</h1>
+        <p>Try <a href="/api/hello">/api/hello</a> to test the API!</p>
+      </body>
+    </html>
+  `);
 });
+
 
 app.use('/api/auth', authRoutes);
 app.use('/api/chat', chatRoutes);

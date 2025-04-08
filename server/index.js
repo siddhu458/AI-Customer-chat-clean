@@ -27,7 +27,7 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-  res.status(200).json({ message: "Welcome to the AI Customer Chat Server!" });
+  res.sendFile(path.join(__dirname, '../index.html'));
 });
 
 

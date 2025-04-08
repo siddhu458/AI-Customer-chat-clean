@@ -12,7 +12,7 @@ const ChatWindow = () => {
     setMessages([...messages, newMessage]);
 
     try {
-      const response = await axios.post('https://ai-customer-chat-clean-2.onrender.com/api/chat', {
+      const response = await axios.post('https://vercel.com/siddhu-chaparthis-projects/ai-customer-chat-clean-server/api/chat', {
         message: userInput,
       });
 

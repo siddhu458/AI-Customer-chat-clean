@@ -15,7 +15,7 @@ dotenv.config();
 connectDB();
 
 const app = express();
-const allowedOrigin = 'https://ai-customer-chat-clean.vercel.app';
+
 app.use(cors({
   origin: "https://ai-customer-chat-clean-t9xt.vercel.app", // Vercel frontend
   methods: ["GET", "POST", "PUT", "DELETE"],

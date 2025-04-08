@@ -26,6 +26,10 @@ app.use(cors({
 app.use(express.json());
 
 
+app.get('/', (req, res) => {
+  res.status(200).json({ message: "Welcome to the AI Customer Chat Server!" });
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/users', userRoutes);
@@ -33,11 +37,6 @@ app.use('/api/products', productRoutes);
 app.use('/api/utilities', utilityRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/backup', express.static(path.join(__dirname, '../backup')));
-
-app.get('/', (req, res) => {
-  res.send('🟢 Welcome to AI Customer Chat Server API!');
-});
-
 
 
 module.exports = app;

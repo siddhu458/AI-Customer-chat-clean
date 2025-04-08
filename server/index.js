@@ -34,6 +34,11 @@ app.use('/api/utilities', utilityRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/backup', express.static(path.join(__dirname, '../backup')));
 
+app.get('/', (req, res) => {
+  res.send('🟢 Welcome to AI Customer Chat Server API!');
+});
+
+
 
 module.exports = app;
 module.exports.handler = serverless(app);

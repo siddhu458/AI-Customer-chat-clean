@@ -20,7 +20,7 @@ app.use(cors(
     origin: ["https://ai-customer-chat-clean-t9xt.vercel.app"],
     methods: ["POST", "GET", "DELETE", "PUT"],
     credentilas: true
-));
+  }));
 
 console.log("🔐 CORS enabled for:", 'https://ai-customer-chat-clean-t9xt.vercel.app');
 app.use(express.json());

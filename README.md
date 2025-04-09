@@ -81,7 +81,7 @@ npm install
 # Add your OpenAI API key and MongoDB URI in a .env file
 node server.js
 
-💻 Frontend Setup
+### 💻 Frontend Setup
 cd client
 npm install
 npm start
@@ -97,13 +97,12 @@ JWT_SECRET=your_jwt_secret
 OPENAI_API_KEY=your_openai_key
 
 
-
-
 📃 License
 This project is licensed under the MIT License.
 
 ✨ Author
 👨‍💻 siddhu Chaparthi
 
+ E-mail:Siddhuchaparthi86@gmail.com
 🌐 GitHub: https://github.com/siddhu458/AI_Customer_chat-clean
 

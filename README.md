@@ -96,11 +96,14 @@ MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 OPENAI_API_KEY=your_openai_key
 
+
+
+
 📃 License
 This project is licensed under the MIT License.
 
 ✨ Author
 👨‍💻 siddhu Chaparthi
 
-🌐 GitHub: https://github.com/siddhu458
+🌐 GitHub: https://github.com/siddhu458/AI_Customer_chat-clean
 

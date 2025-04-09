@@ -21,7 +21,7 @@ const ChatApp = () => {
 
         try {
             const response = await axios.post(
-                "https://ai-customer-chat-clean-server.vercel.app/api/chat",
+                "https://chatbot-backend-mdzs.onrender.com/api/chat",
                 { message },
                 {
                     headers: {

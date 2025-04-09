@@ -41,11 +41,11 @@ const MoreFeatures = () => {
 
   const handleBackup = async () => {
     try {
-      const response = await axios.post('https://ai-customer-chat-clean-server.vercel.app/api/admin/backup');
+      const response = await axios.post('https://chatbot-backend-mdzs.onrender.com/api/admin/backup');
       const { fileUrl } = response.data;
 
       const link = document.createElement('a');
-      link.href = `https://ai-customer-chat-clean-server.vercel.app/${fileUrl}`;
+      link.href = `https://chatbot-backend-mdzs.onrender.com/${fileUrl}`;
       link.download = fileUrl.split('/').pop();
       document.body.appendChild(link);
       link.click();
@@ -70,7 +70,7 @@ const MoreFeatures = () => {
   };
 
   useEffect(() => {
-    axios.get('https://ai-customer-chat-clean-server.vercel.app/api/users')
+    axios.get('https://chatbot-backend-mdzs.onrender.com/api/users')
       .then(res => {
         setUsers(res.data);
         setTotalUsers(res.data.length);

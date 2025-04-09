@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode'; 
 
-const API_URL = "https://ai-customer-chat-clean-server.vercel.app/api/auth";
+const API_URL = "https://chatbot-backend-mdzs.onrender.com/api/auth";
 
 export const saveToken = (token) => localStorage.setItem("token", token);
 export const getToken = () => localStorage.getItem("token");

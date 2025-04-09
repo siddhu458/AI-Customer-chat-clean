@@ -7,7 +7,7 @@ const ManageProducts = () => {
   const [editingId, setEditingId] = useState(null);
 
   useEffect(() => {
-    axios.get('https://ai-customer-chat-clean-server.vercel.app/api/products')
+    axios.get('hhttps://chatbot-backend-mdzs.onrender.com/api/products')
       .then(res => {
         console.log('Fetched products:', res.data); 
         setProducts(res.data);
@@ -19,7 +19,7 @@ const ManageProducts = () => {
   
 
   const fetchProducts = () => {
-    axios.get('https://ai-customer-chat-clean-server.vercel.app/api/products')
+    axios.get('https://chatbot-backend-mdzs.onrender.com/api/products')
       .then(res => setProducts(res.data))
       .catch(console.error);
   };
@@ -31,10 +31,10 @@ const ManageProducts = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     if (editingId) {
-     await axios.put(`https://ai-customer-chat-clean-server.vercel.app/api/products/${editingId}`, form);
+     await axios.put(`https://chatbot-backend-mdzs.onrender.com/api/products/${editingId}`, form);
 
     } else {
-      await axios.post('https://ai-customer-chat-clean-server.vercel.app/api/products', form);
+      await axios.post('https://chatbot-backend-mdzs.onrender.com/api/products', form);
     }
     setForm({ name: '', price: '', availability: '' });
     setEditingId(null);
@@ -47,7 +47,7 @@ const ManageProducts = () => {
   };
 
   const handleDelete = async id => {
-    await axios.delete(`https://ai-customer-chat-clean-server.vercel.app/api/products/${id}`);
+    await axios.delete(`https://chatbot-backend-mdzs.onrender.com/api/products/${id}`);
     fetchProducts();
   };
 
